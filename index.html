@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Horizon - Event Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Event Horizon</h1>
+    </header>
+
+    <main>
+        <section id="add-event">
+            <h2>Add New Event</h2>
+            <form id="event-form">
+                <div class="form-group">
+                    <label for="event-name">Event Name:</label>
+                    <input type="text" id="event-name" required placeholder="Enter event name">
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date:</label>
+                    <input type="date" id="event-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-desc">Event Description:</label>
+                    <textarea id="event-desc" required placeholder="Enter event description"></textarea>
+                </div>
+                <button type="submit" id="add-btn">Add Event</button>
+            </form>
+            <div id="warning-message" class="hidden">Please fill in all fields!</div>
+        </section>
+
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Search events by name or date...">
+        </section>
+
+        <section id="event-list-section">
+            <h2>Upcoming & Past Events</h2>
+            <div id="event-list">
+                <!-- Events will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Manus | Event Horizon</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
